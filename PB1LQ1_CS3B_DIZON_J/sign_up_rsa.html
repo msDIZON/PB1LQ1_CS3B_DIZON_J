@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enrollment/Sign Up with RSA</title>
+
+  <!-- JSEncrypt library, nagge generate ng RSA -->
+  <script src="https://cdn.jsdelivr.net/npm/jsencrypt@latest/bin/jsencrypt.min.js"></script>
+
+  <link rel="stylesheet" href="sursa.css" />
+</head>
+
+<body>
+<!-- Enrollment/Sign Up form -->
+  <h1>Sign Up/Enrollment</h1>
+
+  <form id="signupForm">
+    <label>Full Name
+      <input type="text" id="full_name" required/>
+    </label>
+
+    <label>Date of Birth
+      <input type="date" id="birthday" required/>
+    </label>
+
+    <label>Year Level
+      <input type="text" id="year_level" required/>
+    </label>
+
+    <label>Gender
+      <input type = "text" id="gender" required/>
+    </label>
+
+    <label>Username
+      <input type="text" id="uname" required/>
+    </label>
+
+    <label>Password
+      <input type="password" id="pword" required/>
+    </label>
+
+    <button type="submit">Sign Up</button>
+  </form>
+
+<!-- Status message, if generating ba-->
+  <p id="statusMsg"></p>
+
+<!--Original data, 1024 bit, 3072 bit-->
+  <div id="results" class="hidden">
+
+    <div class="box">
+      <div class="label">ORIGINAL DATA (Username + Password + Date + Gender)</div>
+      <div id="originalText"></div>
+    </div>
+
+    <label class="label1">1024-bit Encryption</label>
+    <div class="box">
+      <div class="label">ENCRYPTED</div>
+      <div id="encrypted1024" class="mono"></div>
+      <div class="label">DECRYPTED</div>
+      <div id="decrypted1024"></div>
+    </div>
+
+    <label class="label1">3072-bit Encryption</label>
+    <div class="box">
+      <div class="label">ENCRYPTED</div>
+      <div id="encrypted3072" class="mono"></div>
+      <div class="label">DECRYPTED</div>
+      <div id="decrypted3072"></div>
+    </div>
+
+  </div>
+
+  <script src="sursa.js"></script>
+</body>
+</html>
